@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]){
-	int nombre[] ={71, 117, 105, 108, 101, 0};
+	int nombre[] ={65, 82, 77, 65, 78};
 
 	for(int i = 0; i < sizeof(nombre)/sizeof(int); i++)
 		printf(" %c",nombre[i]);
