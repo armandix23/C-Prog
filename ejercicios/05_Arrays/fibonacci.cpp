@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+
+#define N 100
 int main(int argc, char *argv[]){
 
-	int Numero = 1, NUM = 1, contador = 2, min;
+	int hoy, ayer = 1,antes = 1;
+	printf("%i %i",antes,ayer);
 
-	printf(" %i, %i,",Numero, NUM);
+	for(int i=0; i<N; i++){
 
-	do{
-		min = Numero + NUM;
-		printf(" %i",min);
+	hoy = ayer + antes;
+	printf("%i",hoy);
 
-		Numero = NUM;
-		NUM = min;
-		contador++;
+	antes = ayer;
+	ayer = hoy;
 
-	}while(contador < 100);
+	}
 
 	printf(" \n");
 
