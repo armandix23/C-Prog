@@ -6,6 +6,7 @@
 #define MAX 0x100
 #define CANTIDAD(x) (sizeof ( (x) ) / sizeof(char *) - 1)
 
+// CHAR Donde metemos todas las palabras que queremos incluir en el juego.
 const char *palabra[]={"melifluo","inefable","sonambulo","serendipia","limerencia","etereo","arrebol","irisdencia","epifania","luminiscencia","soledad","aurora","efimero","incandescencia","elocuencia","efervescencia",NULL};
 
 int main(int argc, char *argv[]){
@@ -14,11 +15,15 @@ int main(int argc, char *argv[]){
 
         printf("\nTienes 6 intentos \n");
 
+
+
     char adivinado[MAX], letErroneas[MAX];
     const char *elegida;
     char letra;
     int aleatoria, numLet = 1, Errors = 0;
 
+
+// Aqui elige una palabra al azar del char
     srand(time(NULL));
     aleatoria = rand() % CANTIDAD(palabra);
     elegida = palabra[aleatoria];
@@ -27,9 +32,8 @@ int main(int argc, char *argv[]){
 
     bzero(adivinado,MAX);
     for (int i=0; i<(int) strlen(elegida); i++)
-        adivinado[i] = '-';
-
-    adivinado[0] = ' ';
+        adivinado[i] = '-'; //rellenar con guiones la palabra a adivinar
+    	adivinado[0] = ' '; 
 
     printf("\t\n%s\n", adivinado);
 //  printf("\t%s\n", elegida); tapando este printf evitamos que salga la palabra seleccionada
