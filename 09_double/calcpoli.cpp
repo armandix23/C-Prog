@@ -1,33 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 #define N 20
-
-double f(double pol(N), double x){
-
-    double ope = 0;
-
-    for(int i = 0; i<N; i++);
-    ope += pol[i]*pol(x,i);
-
-    printf(" %.0lf \n ",ope);
-    return ope;
-}
 
 
 int main(int argc, char *argv[]){
 
-    double polinomio[N];
-    double x = 2;
+    double coef[N];
+    double resultado = 0;
+    double x;
+    double max_cof;
+    double potencia = 1;
 
+    printf("Dime el maximo de coeficientes que quieres guardar: \n ");
+    scanf(" %lf",&max_cof);
 
-    printf("Introduce una secuencia de numeros para el polinomio: \n");
-    for(int i = 0; i<N; i++)
-    scanf(" %lf",&polinomio[i]);
+    printf("Dime los coeficientes de atras a delante: \n ");
+      for(int i=0; i<=max_cof ;i++){
+          scanf(" %lf",&coef[i]);
+      }
 
+    printf("Dime el valor de x: \n ");
+    scanf(" %lf",&x);
 
-    f(polinomio,x);
+    for(int pos=0; pos<=max_cof; pos++, potencia*=x)
+        resultado+=coef[pos]*potencia;
+
+    printf("El resultado es %lf \n ",resultado);
+
 
 
 
