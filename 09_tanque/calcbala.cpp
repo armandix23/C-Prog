@@ -18,14 +18,17 @@ int main(int argc, char *argv[]){
     printf("Dime la velocidad de vy \n ");
     scanf("%lf",&vy);
 
-    
 
-    for(int i=0; i<99 ;i++)
-        vx += ax * tiempo;
-        vy += ay * tiempo;
+    for(int i=0; i<tiempo; i++){
+        vx += ax[i] * tiempo;
+      }
 
-        printf("El valor de vx es %lf \n",vx);
-        printf("El valor de vy es %lf \n",vy);
+     for(int k=0; k<tiempo; k++){
+        vy += ay[k] * tiempo;
+     }
+
+    printf("El valor de vx es %lf \n",vx);
+    printf("El valor de vy es %lf \n",vy);
 
   	return EXIT_SUCCESS;
 }
