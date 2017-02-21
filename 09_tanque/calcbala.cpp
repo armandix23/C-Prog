@@ -12,23 +12,23 @@ int main(int argc, char *argv[]){
     double vy;
     double caja;
 
-    printf("Dime la velocidad de vx y de vy \n");
+    printf("Dime la velocidad de vx  \n");
     scanf("%lf",&vx);
 
     printf("Dime la velocidad de vy \n ");
     scanf("%lf",&vy);
 
 
-    for(int i=0; i<tiempo; i++){
-        vx += ax[i] * tiempo;
-      }
+    for(int i=0; i<tiempo; i++)
+        vx += ax * tiempo;
+      
 
-     for(int k=0; k<tiempo; k++){
-        vy += ay[k] * tiempo;
-     }
+     for(int k=0; k<tiempo; k++)
+        vy += ay * tiempo;
+    
 
-    printf("El valor de vx es %lf \n",vx);
-    printf("El valor de vy es %lf \n",vy);
+    printf("El valor de vx es %lf\n",vx);
+    printf("El valor de vy es %lf\n",vy);
 
   	return EXIT_SUCCESS;
 }
