@@ -24,7 +24,7 @@
 int main(int argc, char *argv[]){
 
       int coeficiente[N];
-      int x = 2;
+      int x;
       int potencia = 1;
       int max_cof;
       int resultado = 0;
@@ -38,10 +38,13 @@ int main(int argc, char *argv[]){
       scanf(" %d", &coeficiente[i]);
       }
 
+      printf("Dime el valor de x \n ");
+      scanf(" %i",&x);
+
       for(int j=0; j <= max_cof; j++,potencia*=x)
       resultado+=coeficiente[j]*potencia;
 
       printf("Resultado es: %i \n", resultado);
 
-      return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }
