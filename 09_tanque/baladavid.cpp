@@ -6,35 +6,37 @@
 #define X 0
 #define Y 1
 
-double vx (double v, double x, double tiempo){
-       for(int i=0; i<tiempo; i++)
+double vx (double v, double x, double s){
+       for(int i=0; i<s; i++)
                   v += x * delta;
           return v;
 }
-double vy (double v, double y, double tiempo){
-        for(int i=0; i<tiempo; i++)
+double vy (double v, double y, double s){
+        for(int i=0; i<s; i++){
                     v += y * delta;
+                            printf("En el segundo %lf, la velocidad de Y es: %lf\n", s,v);
+                                    }
             return v;
 }
 
 int main(int argc, char *argv[]){
 
-        double tiempo;
-            double x;
-                double y;
-                    double a[DIM] = {0,-10};
+        double s, x, y;
+            double a[DIM] = {0,-10};
 
-                        printf("Introducir el tiempo: \n");
-                            scanf(" %lf", &tiempo);
+                printf("Introducir los segundos: \n");
+                    scanf(" %lf", &s);
 
-                                printf("Introducir la velocidad de x \n");
-                                    scanf(" %lf", &x);
+                        printf("Introducir la velocidad de x \n");
+                            scanf(" %lf", &x);
 
-                                        printf("Introducir la velocidad de y: \n");
-                                            scanf(" %lf", &y);
+                                printf("Introducir la velocidad de y: \n");
+                                    scanf(" %lf", &y);
 
-                                                printf(" La velocidad de x es: %lf y de y es: %lf\n", vx (x, a[X], tiempo), vy (y, a[Y], tiempo));
+                                        system("clear");
 
-                                                    return EXIT_SUCCESS;
+                                            printf(" \nLa velocidad de X es: %lf y de Y es: %lf\n", vx (x, a[X], s), vy (y, a[Y], s));
+
+                                                return EXIT_SUCCESS;
 }
 
