@@ -5,7 +5,7 @@
 
 
 #define tiempo 10
-#define DELTA 0.001
+#define DELTA .1
 #define ax 0 // Aceleracion
 #define ay -10
 
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]){
     
 
        clear();
-      mvprintw(ay-vy,ax+vx, "O");
+      mvprintw(20-vy,20+vx, "O");
 
       refresh();
       usleep(100000);
